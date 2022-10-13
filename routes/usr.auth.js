@@ -57,7 +57,7 @@ router.post('/login', async(req,res)=>{
     }
     // generate an auth-token for your user
     const token = jsonwebtoken.sign({_id:user._id}, process.env.TOKEN_SECRET)
-    res.header('token', token).send({'auth-token':token})
+    res.header('token', token).send({'token':token})
 })
 
 
