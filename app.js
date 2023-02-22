@@ -22,10 +22,6 @@ app.use('/itm',bidRoute)
 app.use('/usr',authRoute)
 app.use('/usr',accountRoute)
 
-app.get('/', (req,res)=>{
-    res.send('Welcome to the Mini-Bid homepage.')
-})
-
 mongoose.connect(process.env.DB_CONNECTOR, ()=>{
     console.log('DB is connected')
 })
